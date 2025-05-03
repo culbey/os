@@ -1,0 +1,26 @@
+#!./wsh
+
+
+
+local a=one
+local b=two
+vars >output.txt
+# should print one
+echo --------------------- >>output.txt
+echo $a >>output.txt
+echo --------------------- >>output.txt
+ls >>output.txt
+
+echo --------------------- >>output.txt
+ls &>>output.txt
+echo --------------------- >>output.txt
+
+
+local $a=b
+echo $a >>output.txt
+#history
+local a=two
+history 1
+
+
+
